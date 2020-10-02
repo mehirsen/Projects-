@@ -1,0 +1,22 @@
+# Projects-
+
+import matplotlib.pyplot as plt
+import numpy as np
+n_groups=4
+mA=[100,150,90,10]
+mV=[125,75,80,15]
+fig,ax=plt.subplots()
+index=np.arange(n_groups)
+bar_width=0.35
+opacity=0.8
+rect1=plt.bar(index,mA,bar_width,alpha=opacity,color='b',align='center',label='import')
+rect2=plt.bar(index+bar_width,mV,bar_width,alpha=opacity,color='g',align='center',label='export')
+plt.xlabel('country')
+plt.ylabel('money in USD billion')
+plt.title('Segement is IT')
+plt.xticks(index+bar_width,('USA','Germany','China','Denmark'))
+plt.legend()
+plt.tight_layout()
+plt.grid(linestyle=':',linewidth='0.5',color='black')
+
+plt.show()
